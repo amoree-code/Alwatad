@@ -1,0 +1,3 @@
+.bg-gradient-custom {
+  @apply bg-gradient-to-r from-stone-900 to-indigo-600;
+}

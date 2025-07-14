@@ -1,9 +1,12 @@
-import React from 'react';
-
+import React from "react";
+import "./app.css";
+import Home from "./page/Home";
+import Navbar from "./components/navbar/Navbar";
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className=" bg-gradient-to-r from-stone-900 to-indigo-600 min-h-screen">
+      <Navbar />
+      <Home />
     </div>
   );
 }
