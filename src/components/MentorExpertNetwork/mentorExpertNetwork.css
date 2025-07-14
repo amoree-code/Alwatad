@@ -1,0 +1,133 @@
+.mentor-expert-network {
+  padding: 20px;
+}
+.mentor-expert-network-header-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mentor-expert-network-header-left {
+  flex: 1;
+}
+.mentor-expert-network-header-title {
+  color: #d3d3d3;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 0 24px;
+  line-height: 1.1;
+}
+.mentor-expert-network-header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.mentor-expert-network-header-desc {
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 18px;
+  margin-right: 40px;
+  max-width: 350px;
+  text-align: right;
+}
+
+.mentor-expert-network-images {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mentor-expert-network-image {
+  width: 100%;
+  height: 600px;
+  max-width: 220px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #ededed;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 1200px) {
+  .mentor-expert-network-header-title {
+    font-size: 2rem;
+  }
+  .mentor-expert-network-image {
+    max-width: 150px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mentor-expert-network-header-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .mentor-expert-network-header-title {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+  .mentor-expert-network-header-desc {
+    margin-right: 0;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .mentor-expert-network-images {
+    gap: 10px;
+  }
+  .mentor-expert-network-image {
+    max-width: 110px;
+    height: 160px;
+  }
+  .mentor-expert-network-image-container {
+    min-width: 90px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mentor-expert-network-header-title {
+    font-size: 1.1rem;
+  }
+  .mentor-expert-network-header-desc {
+    font-size: 0.85rem;
+  }
+  .mentor-expert-network-images {
+    gap: 6px;
+  }
+  .mentor-expert-network-image {
+    max-width: 70px;
+    height: 90px;
+  }
+  .mentor-expert-network-image-container {
+    min-width: 60px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .mentor-expert-network-header-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .mentor-expert-network-header-title {
+    margin-left: 0;
+    font-size: 2rem;
+  }
+  .mentor-expert-network-header-desc {
+    margin-right: 0;
+    text-align: left;
+  }
+}

@@ -1,0 +1,56 @@
+/* Footer Trust Bar */
+.footer-list-bar {
+  width: 100%;
+  background: #23213a;
+  padding: 30px 10px 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-list-title {
+  color: #e0e0f7;
+  font-size: 1.18rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.footer-list-title span {
+  color: #a084ff;
+  font-weight: 700;
+}
+
+/* .footer-list-logos {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+.footer-list-logos img {
+  height: 50px;
+  opacity: 0.7;
+  filter: grayscale(1) brightness(1.2);
+  transition: opacity 0.2s, filter 0.2s, transform 0.2s;
+}
+
+.footer-list-logos img:hover {
+  opacity: 1;
+  filter: grayscale(1) brightness(1.1);
+  transform: scale(1.07);
+}
+@media (max-width: 700px) {
+  .footer-list-bar {
+    padding: 18px 0 10px 0;
+  }
+  .footer-list-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .footer-list-logos {
+    gap: 18px;
+  }
+  .footer-list-logos img {
+    height: 22px;
+  }
+}
