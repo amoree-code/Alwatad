@@ -19,52 +19,74 @@ export default function Navbar() {
 
   return (
     <>
+      {/* ====== Navbar ====== */}
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-black/30 backdrop-blur-md shadow-md' : ''
+          scrolled ? 'bg-black/50 backdrop-blur-md shadow-md' : ''
         }`}
       >
-        <div className="h-[90px] max-w-7xl flex items-center justify-between mx-auto px-4 sm:px-8 lg:px-12">
-          <ul className="hidden md:flex items-center justify-between gap-8 z-50">
-            <Link to={'/'} className="flex items-center gap-2 cursor-pointer">
-              <img src="/Alwatad.ico" alt="Logo" className="w-12 h-12 mr-10" />
+        <div className="h-[90px] max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+          {/* Logo + Links */}
+          <div className="flex items-center gap-10">
+            <Link to="/" className="flex items-center">
+              <img src="/Alwatad.ico" alt="Logo" className="w-12 h-12" />
             </Link>
-            <li>
-              <Link to={'/'} className="text-white font-normal">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to={'/about'} className="text-white font-normal">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to={'/programs'} className="text-white font-normal">
-                Programs
-              </Link>
-            </li>
-            <li>
-              <Link to={'/portfolio'} className="text-white font-normal">
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to={'/contact'} className="text-white font-normal">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
 
+            <ul className="hidden md:flex items-center gap-6">
+              <li>
+                <Link
+                  to="/"
+                  className="text-white hover:text-gray-300 font-normal transition"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-white hover:text-gray-300 font-normal transition"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/programs"
+                  className="text-white hover:text-gray-300 font-normal transition"
+                >
+                  Programs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/portfolio"
+                  className="text-white hover:text-gray-300 font-normal transition"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white hover:text-gray-300 font-normal transition"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Globe + CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <img src="/icons/globe-alt.svg" alt="" width={30} height={30} />
-            <button className="bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-lg px-6 py-2 text-base shadow-md transition-all duration-200">
+            <img src="/icons/globe-alt.svg" alt="" className="w-6 h-6" />
+            <button className="bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-lg px-6 py-2 text-base shadow-md hover:from-indigo-600 hover:to-indigo-800 transition">
               Start Now
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden absolute right-10 flex items-center justify-center w-11 h-11 rounded-lg bg-indigo-900/20 text-white text-3xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-indigo-900/30 text-white text-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
             onClick={handleMenuToggle}
             aria-label="Toggle menu"
           >
@@ -73,7 +95,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* قائمة الموبايل تبقى كما هي */}
+      {/* ====== Mobile Menu ====== */}
       <div
         className={`fixed inset-0 bg-[rgba(20,20,40,0.97)] z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden shadow-2xl ${
           menuOpen
@@ -81,40 +103,34 @@ export default function Navbar() {
             : 'opacity-0 pointer-events-none'
         }`}
       >
+        {/* Logo */}
         <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
           <img src="/Alwatad.ico" alt="Logo" className="w-16 h-16 mb-4" />
         </div>
 
-        <button
-          className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-indigo-900/40 text-white text-3xl focus:outline-none focus:ring-2 focus:ring-indigo-400 z-50 shadow-lg"
-          onClick={handleMenuToggle}
-          aria-label="Close menu"
-        >
-          <span>&#10005;</span>
-        </button>
-
+        {/* Menu Items */}
         <ul className="flex flex-col gap-7 items-center mt-28">
           <li>
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-white text-2xl font-semibold px-8 py-3"
               onClick={handleLinkClick}
             >
               Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-white text-2xl font-semibold px-8 py-3"
-              onClick={handleLinkClick}
-            >
-              About
-            </a>
+            </Link>
           </li>
           <li>
             <Link
-              to={'/programs'}
+              to="/about"
+              className="text-white text-2xl font-semibold px-8 py-3"
+              onClick={handleLinkClick}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/programs"
               className="text-white text-2xl font-semibold px-8 py-3"
               onClick={handleLinkClick}
             >
@@ -123,7 +139,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to={'/Portfolio'}
+              to="/portfolio"
               className="text-white text-2xl font-semibold px-8 py-3"
               onClick={handleLinkClick}
             >
@@ -131,17 +147,18 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="text-white text-2xl font-semibold px-8 py-3"
               onClick={handleLinkClick}
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
 
-        <button className="mt-10 bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-lg px-10 py-4 text-xl shadow-md hover:from-indigo-400 hover:to-indigo-600">
+        {/* CTA */}
+        <button className="mt-10 bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-lg px-10 py-4 text-xl shadow-md hover:from-indigo-400 hover:to-indigo-600 transition">
           Start Now
         </button>
       </div>

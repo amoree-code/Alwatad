@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const HeroAbout = () => {
   return (
-    <div className="relative min-h-[calc(100vh-90px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black text-white">
+    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black text-white">
       {/* الخلفية المتدرجة البنفسجية */}
       <div className="absolute inset-0 bg-gradient-to-tr from-[#361585] to-[#301178] blur-[140px] opacity-70 z-0" />
 

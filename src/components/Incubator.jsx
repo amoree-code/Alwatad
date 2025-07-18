@@ -23,7 +23,7 @@ const Incubator = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <section className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12  mt-8 ">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-4xl bg-gradient-to-tr from-[#D9D9D9] to-[#999999] gradient">
           About the Incubator

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Build() {
   return (
-    <div className="relativ min-h-[calc(100vh-90px)] max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 text-white">
+    <div className="relative max-w-7xl min-h-screen pt-24 sm:pt-28 gap-6 mx-auto px-4 sm:px-8 lg:px-12 my-8  ">
       {/* العنوان والوصف */}
       <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-10">
         <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-tr from-[#D9D9D9] to-[#999999] bg-clip-text text-transparent leading-tight">
@@ -20,9 +20,11 @@ function Build() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* المخطط البياني */}
         <div className="col-span-2 bg-white/5 backdrop-blur-sm rounded-xl p-6 min-h-[250px] shadow-md">
-          <div className="flex justify-between text-sm text-gray-400 mt-4">
-            <img src="/charts/Frame186.png" alt="" />
-          </div>
+          <img
+            src="/charts/Frame186.png"
+            alt="Chart"
+            className="w-full h-auto mt-4"
+          />
         </div>
 
         {/* بطاقة الشخص */}
@@ -49,7 +51,7 @@ function Build() {
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 shadow-md">
           <h3 className="mb-4 font-semibold text-lg">Analysis</h3>
           <div className="grid grid-cols-2 gap-2 text-gray-300 text-sm">
-            {["Week 6", "Week 7", "Week 8", "Week 9", "Week 10"].map(
+            {['Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10'].map(
               (week, i) => (
                 <React.Fragment key={i}>
                   <div>{week}</div>
