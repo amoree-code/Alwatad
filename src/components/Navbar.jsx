@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const { i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setShowLangDropdown(false);
+  };
   const handleMenuToggle = () => setMenuOpen((prev) => !prev);
   const handleLinkClick = () => setMenuOpen(false);
 
@@ -16,6 +23,10 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
 
   return (
     <>
@@ -78,7 +89,12 @@ export default function Navbar() {
 
           {/* Globe + CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <img src="/icons/globe-alt.svg" alt="" className="w-6 h-6" />
+            <img
+              src="/icons/globe-alt.svg"
+              alt=""
+              className="w-6 h-6  cursor-pointer  "
+              onClick={changeLanguage}
+            />
             <button className="bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-lg px-6 py-2 text-base shadow-md hover:from-indigo-600 hover:to-indigo-800 transition">
               Start Now
             </button>
